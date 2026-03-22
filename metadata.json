@@ -1,0 +1,5 @@
+{
+  "name": "InterviewMaster AI",
+  "description": "AI-driven interview preparation platform with real-time feedback and performance analysis.",
+  "requestFramePermissions": ["camera", "microphone"]
+}
