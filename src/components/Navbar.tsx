@@ -15,7 +15,7 @@ export default function Navbar({ onStartInterview }: NavbarProps) {
               <Sparkles className="w-6 h-6 text-corporate-900" />
             </div>
             <span className="text-xl font-black tracking-tight text-corporate-900">
-              黄油面试<span className="text-corporate-600">AI</span>
+              George面试
             </span>
           </div>
           <div className="hidden md:flex space-x-8 text-xs font-bold text-corporate-800/60 uppercase tracking-widest">

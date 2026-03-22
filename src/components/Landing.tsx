@@ -213,10 +213,10 @@ export default function Landing({ onStart, selectedPersona, onPersonaSelect }: L
               </div>
             </div>
 
-            {/* Column 2: Job & Results (Right) */}
+              {/* Column 2: Job & Results (Right) */}
             <div className="flex flex-col gap-6">
               {/* JD Upload & Additional Info Fused Section */}
-              <div className="glass-card p-6 rounded-[2.5rem] flex-[2] flex flex-col border-corporate-200/50">
+              <div className="glass-card p-6 rounded-[2.5rem] flex-1 flex flex-col border-corporate-200/50">
                 <div className="flex items-center justify-between mb-5">
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 rounded-2xl bg-corporate-100 flex items-center justify-center shadow-sm">
@@ -242,7 +242,7 @@ export default function Landing({ onStart, selectedPersona, onPersonaSelect }: L
                 
                 <div className="flex-1 flex flex-col gap-4">
                   {jdMode === 'upload' ? (
-                    <div className="flex-1 border-2 border-dashed border-corporate-200 rounded-3xl p-6 flex flex-col items-center justify-center bg-white/60 hover:bg-white/90 transition-all cursor-pointer group shadow-inner">
+                    <div className="flex-1 border-2 border-dashed border-corporate-200 rounded-3xl p-6 flex flex-col items-center justify-center bg-white/60 hover:bg-white/90 transition-all cursor-pointer group shadow-inner min-h-[160px]">
                       <Upload className="w-8 h-8 text-corporate-300 mb-3 group-hover:scale-110 transition-transform" />
                       <p className="text-[10px] text-corporate-800/40 mb-3 text-center font-black">上传 JD 让 AI 更精准</p>
                       <button className="bg-corporate-100 text-corporate-600 px-5 py-1.5 rounded-full text-[9px] font-black hover:bg-corporate-200 transition-colors border border-corporate-200">
@@ -252,7 +252,7 @@ export default function Landing({ onStart, selectedPersona, onPersonaSelect }: L
                   ) : (
                     <div className="flex-1">
                       <textarea 
-                        className="w-full h-full bg-white/60 border border-corporate-200 rounded-3xl p-4 text-xs text-corporate-900 placeholder-corporate-800/30 focus:ring-4 focus:ring-corporate-400/20 focus:border-corporate-400 transition-all resize-none custom-scrollbar min-h-[120px] font-bold shadow-inner"
+                        className="w-full h-full bg-white/60 border border-corporate-200 rounded-3xl p-4 text-xs text-corporate-900 placeholder-corporate-800/30 focus:ring-4 focus:ring-corporate-400/20 focus:border-corporate-400 transition-all resize-none custom-scrollbar min-h-[160px] font-bold shadow-inner"
                         placeholder="在此粘贴招聘岗位描述内容..."
                       />
                     </div>
@@ -264,38 +264,9 @@ export default function Landing({ onStart, selectedPersona, onPersonaSelect }: L
                       <span className="text-[10px] font-black text-corporate-800/40 uppercase tracking-[0.2em]">补充信息 (可选)</span>
                     </div>
                     <textarea 
-                      className="w-full bg-white/60 border border-corporate-200 rounded-3xl p-4 text-xs text-corporate-900 placeholder-corporate-800/30 focus:ring-4 focus:ring-corporate-400/20 focus:border-corporate-400 transition-all resize-none custom-scrollbar h-24 font-bold shadow-inner"
+                      className="w-full bg-white/60 border border-corporate-200 rounded-3xl p-4 text-xs text-corporate-900 placeholder-corporate-800/30 focus:ring-4 focus:ring-corporate-400/20 focus:border-corporate-400 transition-all resize-none custom-scrollbar h-32 font-bold shadow-inner"
                       placeholder="特定项目经历或期望..."
                     />
-                  </div>
-                </div>
-              </div>
-
-              {/* Parsing Results Section */}
-              <div className="glass-card p-6 rounded-[2.5rem] flex-1 flex flex-col border-corporate-200/50">
-                <div className="flex items-center justify-between mb-5">
-                  <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-xl bg-corporate-100 flex items-center justify-center shadow-sm">
-                      <Zap className="w-4 h-4 text-corporate-600" />
-                    </div>
-                    <h4 className="text-xs font-black text-corporate-900 uppercase tracking-widest">JD 智能解析结果</h4>
-                  </div>
-                  <span className="text-[10px] font-black text-corporate-600 animate-pulse">解析中...</span>
-                </div>
-                <div className="flex-1 space-y-4 custom-scrollbar overflow-y-auto max-h-[140px] pr-2">
-                  <div className="grid grid-cols-2 gap-3">
-                    <div className="bg-white/80 p-3 rounded-2xl border border-corporate-100 shadow-sm">
-                      <span className="text-[9px] font-black text-corporate-800/30 uppercase tracking-wider">目标公司</span>
-                      <p className="text-xs font-black text-corporate-900">等待上传...</p>
-                    </div>
-                    <div className="bg-white/80 p-3 rounded-2xl border border-corporate-100 shadow-sm">
-                      <span className="text-[9px] font-black text-corporate-800/30 uppercase tracking-wider">业务部门</span>
-                      <p className="text-xs font-black text-corporate-900">等待上传...</p>
-                    </div>
-                  </div>
-                  <div className="bg-white/80 p-4 rounded-2xl border border-corporate-100 shadow-sm">
-                    <span className="text-[9px] font-black text-corporate-800/30 uppercase block mb-2 tracking-wider">核心职责</span>
-                    <p className="text-xs text-corporate-800/40 italic font-bold leading-relaxed">自动解析岗位职责详情...</p>
                   </div>
                 </div>
               </div>
@@ -476,7 +447,7 @@ export default function Landing({ onStart, selectedPersona, onPersonaSelect }: L
                   </div>
                   <div>
                     <h3 className="text-2xl font-black text-corporate-900">AI 简历精准优化</h3>
-                    <p className="text-xs text-corporate-500 font-bold">根据目标岗位 JD，深度优化您的简历竞争力</p>
+                    <p className="text-xs text-corporate-500 font-bold">深度优化您的简历竞争力</p>
                   </div>
                 </div>
                 <button onClick={() => setShowResumeOptimizer(false)} className="p-3 hover:bg-corporate-100 rounded-full transition-colors group">
@@ -492,7 +463,7 @@ export default function Landing({ onStart, selectedPersona, onPersonaSelect }: L
                       <Zap className="absolute inset-0 m-auto w-8 h-8 text-green-600 animate-pulse" />
                     </div>
                     <div className="text-center">
-                      <h4 className="text-lg font-black text-corporate-900">AI 正在深度解析 JD 与简历...</h4>
+                      <h4 className="text-lg font-black text-corporate-900">AI 正在深度解析简历...</h4>
                       <p className="text-xs text-corporate-500 font-bold mt-2">匹配核心关键词、对齐技术栈、优化业务话术</p>
                     </div>
                   </div>
@@ -513,26 +484,26 @@ export default function Landing({ onStart, selectedPersona, onPersonaSelect }: L
                     <div className="space-y-4">
                       <h4 className="text-sm font-black text-green-600 uppercase tracking-widest flex items-center gap-2">
                         <Zap className="w-4 h-4" />
-                        基于 JD 的 AI 优化建议
+                        AI 深度优化建议
                       </h4>
                       <div className="bg-green-50/50 rounded-3xl p-6 border border-green-100 shadow-inner h-[400px] overflow-y-auto custom-scrollbar">
                         <div className="space-y-6">
                           <div className="p-4 bg-white rounded-2xl border border-green-100 shadow-sm">
-                            <span className="text-[10px] font-black text-green-600 uppercase tracking-wider mb-2 block">JD 核心匹配增强</span>
+                            <span className="text-[10px] font-black text-green-600 uppercase tracking-wider mb-2 block">核心竞争力增强</span>
                             <p className="text-xs text-corporate-800 font-bold leading-relaxed">
-                              当前 JD 强调“高并发架构经验”，建议在简历第一段突出您处理过千万级流量的实战案例，并使用“架构师视角”重构描述。
+                              建议在简历第一段突出您处理过千万级流量的实战案例，并使用“架构师视角”重构描述。
                             </p>
                           </div>
                           <div className="p-4 bg-white rounded-2xl border border-green-100 shadow-sm">
-                            <span className="text-[10px] font-black text-green-600 uppercase tracking-wider mb-2 block">技术栈针对性对齐</span>
+                            <span className="text-[10px] font-black text-green-600 uppercase tracking-wider mb-2 block">技术栈深度优化</span>
                             <p className="text-xs text-corporate-800 font-bold leading-relaxed">
-                              JD 提及了对“微服务治理”的要求，建议将您简历中关于 Spring Cloud 的描述细化为：熔断降级策略、服务发现优化及链路追踪实践。
+                              建议将您简历中关于 Spring Cloud 的描述细化为：熔断降级策略、服务发现优化及链路追踪实践。
                             </p>
                           </div>
                           <div className="p-4 bg-white rounded-2xl border border-green-100 shadow-sm">
-                            <span className="text-[10px] font-black text-green-600 uppercase tracking-wider mb-2 block">业务场景话术优化</span>
+                            <span className="text-[10px] font-black text-green-600 uppercase tracking-wider mb-2 block">项目实战话术优化</span>
                             <p className="text-xs text-corporate-800 font-bold leading-relaxed">
-                              针对该岗位的电商背景，建议将通用项目描述转化为：支撑大促期间系统稳定性，通过多级缓存方案解决热点 Key 问题。
+                              建议将通用项目描述转化为：支撑大促期间系统稳定性，通过多级缓存方案解决热点 Key 问题。
                             </p>
                           </div>
                         </div>

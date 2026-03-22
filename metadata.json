@@ -1,5 +1,5 @@
 {
-  "name": "InterviewMaster AI",
+  "name": "George面试",
   "description": "AI-driven interview preparation platform with real-time feedback and performance analysis.",
   "requestFramePermissions": ["camera", "microphone"]
 }
